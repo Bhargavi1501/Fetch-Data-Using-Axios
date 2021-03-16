@@ -1,0 +1,11 @@
+<div class="container-fluid" style="background-color: #000302;">
+    <div class="card mt-5 card-center text-white" style="background-color: #000302;">
+        <div class="card-body m-3 text-center">
+            <input type="date" name="dateOfBirth" id="dob" #ref>
+            <br><br>
+            <button class="btn btn-primary" (click)="findAge(ref)">Find Age</button>
+        </div>
+    </div>
+</div>
+<br>
+<h5 *ngIf=status class="text-center">Age is {{ageYear}} years and {{ageMonth}} months</h5>

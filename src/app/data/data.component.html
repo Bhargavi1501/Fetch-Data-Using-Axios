@@ -1,0 +1,18 @@
+<!-- <h1 class="text-center mt-5" style="color:darkgreen;">Data</h1> -->
+    <table class="table text-center table-bordered table-striped table-hover mt-5">
+        <thead class="bg-dark text-white">
+            <th>Web pages</th>
+            <th>Name</th>
+            <th>Domains</th>
+            <th>alpha_two_code</th>
+            <th>Country</th>
+        </thead>
+        <tr *ngFor="let p of population | paginate:{ itemsPerPage:5,currentPage:p1} ">
+            <td><a href="#">{{p.web_pages}}</a></td>
+            <td>{{p.name}}</td>
+            <td>{{p.domains}}</td>
+            <td>{{p.alpha_two_code}}</td>
+            <td>{{p.country}}</td>
+        </tr>
+        <pagination-controls (pageChange)="p1=$event"></pagination-controls>
+    </table>

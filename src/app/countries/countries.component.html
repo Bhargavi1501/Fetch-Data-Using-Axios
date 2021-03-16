@@ -1,0 +1,13 @@
+<p>countries works!</p>
+
+<table class="table table-center table-bordered table-striped table-hover mt-5">
+    <thead class="bg-dark text-white m-5 text-center">
+        <th>Name</th>
+        <th>Flag</th>
+        
+    </thead>
+    <tr *ngFor="let c of countries" class="text-center">
+        <td> <a routerLink="" (click)="displayCountryDetails(c)">{{c.name}}</a></td>
+        <td><a [href]=c.flag height="500px" width = "500px">{{c.flag}}</a></td>
+    </tr>
+</table>

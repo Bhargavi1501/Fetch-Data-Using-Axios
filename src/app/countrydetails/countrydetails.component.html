@@ -1,0 +1,44 @@
+<!-- <p>countrydetails works!</p>
+
+<table class="table table-center table-bordered table-striped table-hover mt-5">
+    <thead class="bg-dark text-white m-5 text-center">
+        <th>Name</th>
+        <th>Flag</th>
+        <th>Top level Domain</th>
+        <th>Capital</th>
+        <th>Region</th>
+        <th>Population</th>
+    </thead>
+    <tr *ngFor="let c of countryData" class="text-center">
+        <td>{{c.name}}</td>
+        <td></td>
+        <td>{{c.topLevelDomain}}</td>
+        <td>{{c.capital}}</td>
+        <td>{{c.region}}</td>
+        <td>{{c.population}}</td>
+    </tr>
+</table> -->
+
+<div class="container">
+    <div class="row" *ngFor = "let c of countryData">
+        <h1 class="text-center text-success mt-3 mb-5">{{c.name}}</h1>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <p> <strong>Capital :</strong>  {{c.capital}} </p>
+            <p *ngFor ="let currency of c.currencies">
+                <strong>Currency :</strong> {{currency["code"]}},{{currency["name"]}},{{currency["symbol"]}} 
+            </p>
+           <p> <strong> timezones: </strong>{{c.timezones}} </p> 
+          <strong>Language: </strong>  <div *ngFor ="let language of c.languages"> {{language["name"]}}, {{language["nativeName"]}} </div> 
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+           <img [src]=c.flag height="100%" width="100%"> 
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <p> <strong>Borders:</strong>  {{c.borders}} <br></p> 
+          <p> <strong>Region:</strong>  {{c.region}} <br></p> 
+          <p> <strong>Sub-Region:</strong> {{c.subregion}} <br></p> 
+        </div>
+    </div>
+</div>
