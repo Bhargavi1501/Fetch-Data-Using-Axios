@@ -16,4 +16,9 @@ export class DataService {
   getCountryDetails(name):Observable<any>{
     return this.hc.get("https://restcountries.eu/rest/v2/name/"+name);
   }
+
+  getPosts():Observable<any>{
+    return this.hc.get("https://jsonplaceholder.typicode.com/posts/");
+  }
+  
 }

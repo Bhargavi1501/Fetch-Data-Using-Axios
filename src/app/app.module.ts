@@ -9,13 +9,19 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { FindageComponent } from './findage/findage.component';
 import { CountriesComponent } from './countries/countries.component';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
+import { TemplateComponent } from './template/template.component';
+import { SearchPipe } from './search.pipe';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
     DataComponent,
     FindageComponent,
     CountriesComponent,
-    CountrydetailsComponent
+    CountrydetailsComponent,
+    TemplateComponent,
+    SearchPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,9 @@ app.use(exp.json())
 //import express-async-handler
 const errHandler = require("express-async-handler");
 
+//import dotenv
+require("dotenv").config;
+
 //import axios
 const axios = require("axios");
 
